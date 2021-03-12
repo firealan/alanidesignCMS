@@ -1,9 +1,20 @@
-import bigtextboxwithimages from "components/bigTxtImg/bigtextboxwithimages"
+//import bigtextboxwithimages from "components/bigTxtImg/bigtextboxwithimages"
 
 const BigTxtModule =  ({fields}) => {
 
 	return (
-		<bigtexboxwithimages {...fields}/>
+
+		
+			<div style={containerStyle}>
+		
+			  <div style={{background:yellow}}><span>testasdfasdf</span></div>
+		   
+			  
+			</div>
+		
+	
+		
+		//<bigtextboxwithimages {...fields}/>
 	)
 }
 
