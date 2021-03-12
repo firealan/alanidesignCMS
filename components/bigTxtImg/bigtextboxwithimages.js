@@ -76,4 +76,4 @@ const bigtextboxwithimages = ({ txtbox1, picture }) => {
   );
 };
 
-export default bigtexboxwithimages
+export default bigtextboxwithimages
