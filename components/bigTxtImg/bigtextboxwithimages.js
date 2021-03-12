@@ -54,7 +54,7 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   }
 `;
 
-const bigtextboxwithimages = ({ backgroundImage, title, subTitle, announcement, primaryCTA, videoURL }) => {
+const bigtextboxwithimages = ({ txtbox1, picture }) => {
 
 	//video url should be in this format for vimeo: //player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1
 	let containerStyle = {
@@ -67,12 +67,12 @@ const bigtextboxwithimages = ({ backgroundImage, title, subTitle, announcement, 
 	}
 
   return (
-    <Container style={containerStyle}>
+    <div style={containerStyle}>
 
       <div style={{background:yellow}}><span>test</span></div>
    
       
-    </Container>
+    </div>
   );
 };
 
