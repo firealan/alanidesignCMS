@@ -54,7 +54,7 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   }
 `;
 
-const bigtextboxwithimages = ({ txtbox1, picture }) => {
+const BackgroundAsImage = ({ backgroundImage, title, subTitle, announcement, primaryCTA, videoURL }) => {
 
 	//video url should be in this format for vimeo: //player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1
 	let containerStyle = {
@@ -67,13 +67,29 @@ const bigtextboxwithimages = ({ txtbox1, picture }) => {
 	}
 
   return (
-    <div style={containerStyle}>
-
-      <div style={{background:yellow}}><span>test</span></div>
-   
-      
-    </div>
+    <Container style={containerStyle}>
+      <OpacityOverlay />
+      <HeroContainer>
+        <TwoColumn>
+          <LeftColumn>
+            <Notification>{announcement}</Notification>
+            <Heading>
+              <span>{title}</span>
+              <br />
+              <SlantedBackground>{subTitle}</SlantedBackground>
+            </Heading>
+            <PrimaryAction href={primaryCTA.href} target={primaryCTA.target}>{primaryCTA.text}</PrimaryAction>
+          </LeftColumn>
+          <RightColumn>
+            <StyledResponsiveVideoEmbed
+              url={videoURL}
+              background="transparent"
+            />
+          </RightColumn>
+        </TwoColumn>
+      </HeroContainer>
+    </Container>
   );
 };
 
-export default bigtextboxwithimages
+export default BackgroundAsImage
